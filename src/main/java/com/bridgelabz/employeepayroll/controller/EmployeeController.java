@@ -26,7 +26,7 @@ public class EmployeeController {
 
     @GetMapping("/hello")
     public String sayHello(){
-        return "Hello Adesh";
+        return "Hello from Bridgelabz";
     }
     /*--------------------Post Operation-------------------*/
     @PostMapping("/add")
