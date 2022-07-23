@@ -17,6 +17,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @Slf4j
+@CrossOrigin
 @RestController
 @RequestMapping("/employee")
 public class EmployeeController {
@@ -33,7 +34,7 @@ public class EmployeeController {
     public ResponseEntity<ResponseDTO> addEmployee(@Valid @RequestBody EmployeeDTO employeeDTO){
         Employee newEmployee = new Employee(employeeDTO);
         ResponseDTO responseDTO = new ResponseDTO("Add record  Success", iEmployeeInterface.addEmployee(newEmployee));
-        return new ResponseEntity<ResponseDTO>(responseDTO,HttpStatus.CREATED);
+        return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.CREATED);
     }
     /*--------------------Search by Id---------------------*/
     @GetMapping("/search/{id}")

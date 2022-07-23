@@ -1,5 +1,6 @@
 package com.bridgelabz.employeepayroll.dto;
 
+
 public class ResponseDTO {
     String message;
     Object data;

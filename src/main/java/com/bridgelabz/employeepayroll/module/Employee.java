@@ -14,28 +14,26 @@ import java.util.List;
 @NoArgsConstructor
 public @Data class Employee {
 
+
         @Id
         @GeneratedValue
         int id;
         String fullName;
         String profilePic;
         String gender;
-        @ElementCollection
-        @CollectionTable(name = "department",joinColumns = @JoinColumn(name = "id"))
-        private List<String> department;
+//        @ElementCollection
+//        @CollectionTable(name = "department",joinColumns = @JoinColumn(name = "id"))
+        private String department;
         int salary;
-        String mobileNumber;
-
         LocalDate startDate;
         String notes;
 
         public Employee(int id, Employee employee) {
-                this.id = id;
+//                this.id = id;
                 this.fullName = employee.fullName;
                 this.profilePic = employee.profilePic;
                 this.gender = employee.gender;
                 this.department = employee.department;
-                this.mobileNumber = employee.mobileNumber;
                 this.notes = employee.notes;
                 this.salary = employee.salary;
                 this.startDate = employee.startDate;
@@ -46,24 +44,22 @@ public @Data class Employee {
         }
 
         public Employee(int id, EmployeeDTO employeeDTO) {
-                this.id = id;
+//                this.id = id;
                 this.fullName = employeeDTO.fullName;
                 this.profilePic = employeeDTO.profilePic;
                 this.gender = employeeDTO.gender;
                 this.department = employeeDTO.department;
-                this.mobileNumber = employeeDTO.mobileNumber;
                 this.notes = employeeDTO.notes;
                 this.salary = employeeDTO.salary;
                 this.startDate = employeeDTO.startDate;
         }
 
         public Employee(Employee employee) {
-                this.id = employee.id;
+//                this.id = employee.id;
                 this.fullName = employee.fullName;
                 this.profilePic = employee.profilePic;
                 this.gender = employee.gender;
                 this.department = employee.department;
-                this.mobileNumber = employee.mobileNumber;
                 this.notes = employee.notes;
                 this.salary = employee.salary;
                 this.startDate = employee.startDate;
@@ -73,8 +69,7 @@ public @Data class Employee {
                 this.fullName = employeeDTO.fullName;
                 this.profilePic = employeeDTO.profilePic;
                 this.gender = employeeDTO.gender;
-                this.department = employeeDTO.department;
-                this.mobileNumber = employeeDTO.mobileNumber;
+                this.department= employeeDTO.department;
                 this.notes = employeeDTO.notes;
                 this.salary = employeeDTO.salary;
                 this.startDate = employeeDTO.startDate;

@@ -42,6 +42,7 @@ public class EmployeeServices implements IEmployeeInterface{
             Employee search = employeeRepository.save(newEmployee);
             return "Done " + search;
         }
+
         else throw (new EmployeeException("Wrong input"));
     }
 

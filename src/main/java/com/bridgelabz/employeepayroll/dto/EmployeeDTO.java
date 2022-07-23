@@ -25,20 +25,16 @@ public @ToString class EmployeeDTO {
     public String gender;
 
     @NotEmpty(message = "Please Enter the department at least 1")
-    @ElementCollection
-    @CollectionTable(name = "department",joinColumns = @JoinColumn(name = "id"))
-    public List<String> department;
+//    @ElementCollection
+//    @CollectionTable(name = "department",joinColumns = @JoinColumn(name = "id"))
+//    @Column(name = "department")
+    public String department;
     @Min(value = 10000, message = "Enter the salary more than 10000")
     public int salary;
 
-    @Email(message = "Enter the email as null")
-    public String email;
-    @NotNull(message = "Mobile number can not be Null")
-    public String mobileNumber;
-
     @NotNull(message = "Date Should not be null...")
-    @JsonFormat(pattern="dd MM yyyy")
-    @PastOrPresent(message = "Enter valid date...")
+//    @JsonFormat(pattern="Mm/Dd/Yyyy")
+    @PastOrPresent(message = "Enter valid date")
 
     public LocalDate startDate;
     @NotEmpty(message = "Notes can not be Empty")
